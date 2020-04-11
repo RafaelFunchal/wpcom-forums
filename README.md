@@ -12,4 +12,4 @@ This [UserCSS](https://github.com/openstyles/stylus/wiki/Usercss) file adds a Da
 4. Click on `Install style`.
 
 ### The magic
-![Screenshot of the pt-BR WordPress.com Forum with the Dark Mode active](https://cldup.com/sTIB0NLu-2.png)
+![Screenshot of the pt-BR WordPress.com Forum with the Dark Mode active](https://cldup.com/hoJlTbpG8S.jpg)
