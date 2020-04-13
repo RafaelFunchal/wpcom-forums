@@ -3,7 +3,7 @@
 @namespace      github.com/RafaelFunchal/wpcom-forums/dark-mode.user.css
 @homepageURL    https://github.com/RafaelFunchal/wpcom-forums/#dark-mode
 @updateURL      https://github.com/RafaelFunchal/wpcom-forums/dark-mode.user.css
-@version        0.1.3
+@version        0.1.4
 @description    Add a Dark Theme to the WordPress.com forums
 @author         RafaelFunchal
 ==/UserStyle== */
@@ -21,7 +21,7 @@
 		--bg-secondary: #3c434a;
 		--bg-sticky: #4c555e;
 		--padding: 1em;
-		--borders: 1px solid var(--secondary-bg);
+		--borders: 1px solid var(--bg-primary);
 	}
 	
 	/**
@@ -36,6 +36,10 @@
 	#bbpress-forums * {
 		border: none !important;
 	}
+    
+    .bbp-user-page #bbpress-forums #bbp-user-body * {
+        border: var(--borders) !important;
+    }
 	
 	body:not(.single) #bbpress-forums,
 	.single-forum #bbpress-forums .bbp-topics,
@@ -94,14 +98,28 @@
 		color: var(--text-primary);
 		border: none;
 	}
+    
+    #bbpress-forums div.bbp-reply-content blockquote,
+    #bbpress-forums div.bbp-reply-content blockquote *,
+    #bbpress-forums div.bbp-reply-content code,
+    #bbpress-forums div.bbp-reply-content code *,
+    #bbpress-forums div.bbp-reply-content pre,
+    #bbpress-forums div.bbp-reply-content pre *{
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        padding: calc( var(--padding) / 4);
+    }
 	
 	.bbp-template-notice,
 	.bbp-template-notice p{
 		color: var(--text-secondary);
 	}
+    #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a {
+        background-color: var(--bg-secondary);
+    }
 
 	/**
-	 * Content Linkx
+	 * Content Links
 	 */
 	 #bbpress-forums .bbp-body .bbp-reply-content a{
 		color: var(--text-links);
