@@ -3,12 +3,12 @@
 @namespace      github.com/RafaelFunchal/wpcom-forums/dark-mode.user.css
 @homepageURL    https://github.com/RafaelFunchal/wpcom-forums/#dark-mode
 @updateURL      https://github.com/RafaelFunchal/wpcom-forums/dark-mode.user.css
-@version        0.1.1
+@version        0.1.2
 @description    Add a Dark Theme to the WordPress.com forums
 @author         RafaelFunchal
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://wordpress.com/forums/"), url-prefix("https://wordpress.com/br/forums/"), url-prefix("https://wordpress.com/es/forums/"), url-prefix("https://wordpress.com/pt/forums/") {
+@-moz-document regexp("https://wordpress.com/.?.?/?forums/*") {
 	/**
 	 * Variables
 	 */
