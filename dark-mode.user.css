@@ -36,10 +36,10 @@
 	#bbpress-forums * {
 		border: none !important;
 	}
-    
-    .bbp-user-page #bbpress-forums #bbp-user-body * {
-        border: var(--borders) !important;
-    }
+	
+	.bbp-user-page #bbpress-forums #bbp-user-body * {
+		border: var(--borders) !important;
+	}
 	
 	body:not(.single) #bbpress-forums,
 	.single-forum #bbpress-forums .bbp-topics,
@@ -98,25 +98,25 @@
 		color: var(--text-primary);
 		border: none;
 	}
-    
-    #bbpress-forums div.bbp-reply-content blockquote,
-    #bbpress-forums div.bbp-reply-content blockquote *,
-    #bbpress-forums div.bbp-reply-content code,
-    #bbpress-forums div.bbp-reply-content code *,
-    #bbpress-forums div.bbp-reply-content pre,
-    #bbpress-forums div.bbp-reply-content pre *{
-        background-color: var(--bg-primary);
-        color: var(--text-primary);
-        padding: calc( var(--padding) / 4);
-    }
+	
+	#bbpress-forums div.bbp-reply-content blockquote,
+	#bbpress-forums div.bbp-reply-content blockquote *,
+	#bbpress-forums div.bbp-reply-content code,
+	#bbpress-forums div.bbp-reply-content code *,
+	#bbpress-forums div.bbp-reply-content pre,
+	#bbpress-forums div.bbp-reply-content pre *{
+		background-color: var(--bg-primary);
+		color: var(--text-primary);
+		padding: calc( var(--padding) / 4);
+	}
 	
 	.bbp-template-notice,
 	.bbp-template-notice p{
 		color: var(--text-secondary);
 	}
-    #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a {
-        background-color: var(--bg-secondary);
-    }
+	#bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a {
+		background-color: var(--bg-secondary);
+	}
 
 	/**
 	 * Content Links
@@ -149,6 +149,12 @@
 	
 	#bbpress-forums fieldset.bbp-form div.bbp-the-content-wrapper textarea.bbp-the-content {
 		margin-top: var(--padding);
+	}
+	
+	.reply-edit #bbpress-forums fieldset.bbp-form div.bbp-the-content-wrapper textarea,
+	.reply-edit #bbpress-forums fieldset.bbp-form input,
+	body.reply-edit .bbp-reply-form code {
+		background-color: var(--bg-primary);
 	}
 
 	#bbpress-forums ul.bbp-replies,
