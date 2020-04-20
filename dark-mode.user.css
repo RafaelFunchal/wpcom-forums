@@ -3,12 +3,12 @@
 @namespace      github.com/RafaelFunchal/wpcom-forums/dark-mode.user.css
 @homepageURL    https://github.com/RafaelFunchal/wpcom-forums/#dark-mode
 @updateURL      https://github.com/RafaelFunchal/wpcom-forums/dark-mode.user.css
-@version        0.1.4
+@version        0.1.5
 @description    Add a Dark Theme to the WordPress.com forums
 @author         RafaelFunchal
 ==/UserStyle== */
 
-@-moz-document regexp("https://wordpress.com/.?.?/?forums/.*") {
+@-moz-document regexp("https://wordpress.com/.?.?/?forums/.*"), regexp("https://.?.?.?wordpress.org/support/forum/.*"), regexp("https://.?.?.?wordpress.org/support/topic/.*") {
 	/**
 	 * Variables
 	 */
@@ -249,6 +249,46 @@
 	#bbp_topic_submit:hover {
 		background-color: #0074a2;
 		background-image: none;
+	}
+	
+	/**
+	 * WordPress.org Forums Tweaks
+	 */
+	.sidebar h4,
+	.sidebar .forum-info li::before,
+	.sidebar .topic-info li::before,
+	.sidebar div ul li a::before {
+		color: var(--text-primary);
+	}
+
+	#wporg-footer {
+		background-color: var(--bg-primary);
+	}
+	
+	#wporg-footer .cip-image {
+		background-color: var(--text-primary);
+		padding: var(--padding);
+	}
+	
+	#wordpress-org.single-topic .entry-content #bbpress-forums ul.bbp-lead-topic li.bbp-body div.topic,
+	#wordpress-org.single-topic .entry-content header,
+	#wordpress-org.single-topic .entry-content #bbpress-forums div.odd,
+	#wordpress-org.single-topic .entry-content #bbpress-forums div.even {
+		background: transparent;
+		border: none;
+	}
+	#wordpress-org.single-topic #bbpress-forums {
+		padding: var(--padding);
+	}
+	
+	#wordpress-org.single-topic #bbpress-forums,
+	#wordpress-org.single-topic .entry-content header{
+		background-color: var(--bg-secondary);
+	}
+	
+	#wordpress-org.single-topic #bbpress-forums textarea,
+	#wordpress-org.single-topic #bbpress-forums input:not(.ed_button) {
+		background-color: var(--bg-primary);
 	}
 	
 	/**
