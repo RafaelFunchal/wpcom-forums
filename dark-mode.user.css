@@ -3,12 +3,12 @@
 @namespace      github.com/RafaelFunchal/wpcom-forums/dark-mode.user.css
 @homepageURL    https://github.com/RafaelFunchal/wpcom-forums/#dark-mode
 @updateURL      https://github.com/RafaelFunchal/wpcom-forums/dark-mode.user.css
-@version        0.1.5
+@version        0.1.7
 @description    Add a Dark Theme to the WordPress.com forums
 @author         RafaelFunchal
 ==/UserStyle== */
 
-@-moz-document regexp("https://wordpress.com/.?.?/?forums/.*"), regexp("https://.?.?.?wordpress.org/support/forum/.*"), regexp("https://.?.?.?wordpress.org/support/topic/.*") {
+@-moz-document regexp("https://wordpress.com/.?.?/?forums/.*"), regexp("https://.?.?.?wordpress.org/support/(forum|plugin|theme|topic)/.*") {
 	/**
 	 * Variables
 	 */
@@ -257,7 +257,8 @@
 	.sidebar h4,
 	.sidebar .forum-info li::before,
 	.sidebar .topic-info li::before,
-	.sidebar div ul li a::before {
+	.sidebar div ul li a::before,
+    .bbpress #bbpress-forums p.bbp-topic-meta a {
 		color: var(--text-primary);
 	}
 
@@ -290,6 +291,38 @@
 	#wordpress-org.single-topic #bbpress-forums input:not(.ed_button) {
 		background-color: var(--bg-primary);
 	}
+    
+    #wordpress-org #bbpress-forums .bbp-topics ul.topic-replied-by-support li,
+    #wordpress-org #bbpress-forums .bbp-topics ul.topic-replied-by-support li a,
+    #wordpress-org #bbpress-forums .bbp-topics ul.topic-replied-by-support li span,
+    #wordpress-org #bbpress-forums .bbp-topics ul.topic-resolved li,
+    #wordpress-org #bbpress-forums .bbp-topics ul.topic-resolved li a,
+    #wordpress-org #bbpress-forums .bbp-topics ul.topic-resolved li span {
+        color: var(--text-secondary);
+    }
+    
+    #wordpress-org #bbpress-forums .bbp-topics-front ul.super-sticky li,
+	#wordpress-org #bbpress-forums .bbp-topics ul.super-sticky li,
+	#wordpress-org #bbpress-forums .bbp-topics ul.sticky li,
+	#wordpress-org .bbp-forum-content ul.sticky li,
+	#wordpress-org #bbpress-forums .bbp-topics-front ul.super-sticky li a,
+	#wordpress-org #bbpress-forums .bbp-topics ul.super-sticky li a,
+	#wordpress-org #bbpress-forums .bbp-topics ul.sticky li a,
+	#wordpress-org .bbp-forum-content ul.sticky li a,
+    #wordpress-org #bbpress-forums .bbp-topics-front ul.super-sticky li span,
+	#wordpress-org #bbpress-forums .bbp-topics ul.super-sticky li span,
+	#wordpress-org #bbpress-forums .bbp-topics ul.sticky li span,
+	#wordpress-org .bbp-forum-content ul.sticky li span {
+		color: var(--text-primary);
+	}
+    
+    #wordpress-org #bbpress-forums fieldset.bbp-form div.bbp-the-content-wrapper textarea.bbp-the-content,
+    #wordpress-org fieldset.bbp-form input,
+    #wordpress-org input#topic_tags_tag_input,
+    #wordpress-org #staff-notes-loaded textarea,
+    #wordpress-org #notes {
+        border: 1px solid var(--bg-sticky) !important;
+    }
 	
 	/**
 	 * Tweaks when the Localized Support script is in use
