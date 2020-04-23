@@ -1,8 +1,8 @@
-# WordPress.com Forums
+# WordPress.com and WordPress.org Forums
 
 ## Dark Mode
 
-This [UserCSS](https://github.com/openstyles/stylus/wiki/Usercss) file adds a Dark Mode to the WordPress.com forums.
+This [UserCSS](https://github.com/openstyles/stylus/wiki/Usercss) file adds a Dark Mode to the forums of both WordPress.com and WordPress.org.
 
 ### Instructions
 
