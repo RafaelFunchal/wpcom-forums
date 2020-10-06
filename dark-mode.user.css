@@ -3,7 +3,7 @@
 @namespace      github.com/RafaelFunchal/wpcom-forums/dark-mode.user.css
 @homepageURL    https://github.com/RafaelFunchal/wpcom-forums/#dark-mode
 @updateURL      https://github.com/RafaelFunchal/wpcom-forums/raw/master/dark-mode.user.css
-@version        0.1.8
+@version        0.1.9
 @description    Add a Dark Theme to the WordPress.com forums
 @author         RafaelFunchal
 ==/UserStyle== */
@@ -140,7 +140,8 @@
 	#bbpress-forums fieldset.bbp-form div.bbp-the-content-wrapper textarea.bbp-the-content,
 	fieldset.bbp-form input, input#topic_tags_tag_input,
 	#staff-notes-loaded textarea,
-	#notes {
+	#notes,
+    body.topic-edit .bbp-topic-form code {
 		background-color: var(--bg-secondary);
 		border: none;
 		color: var(--text-primary);
@@ -250,6 +251,18 @@
 		background-color: #0074a2;
 		background-image: none;
 	}
+    
+    /**
+     * Profile
+     */
+    #bbpress-forums #bbp-your-profile fieldset input,
+    #bbpress-forums #bbp-your-profile fieldset textarea {
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+    }
+    #bbpress-forums #bbp-your-profile fieldset span.description {
+        background-color: var(--bg-sticky);
+    }
 	
 	/**
 	 * WordPress.org Forums Tweaks
